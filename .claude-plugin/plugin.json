@@ -1,0 +1,7 @@
+{
+  "name": "kit",
+  "version": "0.1.0",
+  "description": "A minimal panel for your skills, plugins and MCP servers: what is active in this chat, what it costs in context, and one-press on/off.",
+  "author": { "name": "effectustasi" },
+  "types": "./types/index.d.ts"
+}

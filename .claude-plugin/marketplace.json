@@ -1,0 +1,13 @@
+{
+  "name": "kit",
+  "owner": { "name": "effectustasi" },
+  "description": "kit: see, switch and discover your Claude Code skills, plugins and MCP servers.",
+  "plugins": [
+    {
+      "name": "kit",
+      "source": "./",
+      "description": "A minimal panel for your skills, plugins and MCP servers: what is active in this chat, what it costs in context, and one-press on/off.",
+      "version": "0.1.0"
+    }
+  ]
+}
