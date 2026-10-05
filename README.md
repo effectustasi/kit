@@ -39,6 +39,10 @@ Then run `/reload-plugins` (or start a new session) and type `/kit`.
 - The [GitHub CLI](https://cli.github.com/) (`gh`), signed in. It is only needed for search, install, descriptions and update checks.
 - `curl`, used to fetch owner avatars. It ships with Windows 10+, macOS and most Linux distributions.
 
+### Known issues
+
+- In the Claude desktop app's Code tab, typing `/kit` may show an orange line **"/kit isn't a command here."** It is harmless: the command still runs and the pane opens. The desktop composer doesn't list commands that mods register at session start yet ([anthropics/claude-code#99691](https://github.com/anthropics/claude-code/issues/99691)).
+
 ## User guide
 
 ### The pane: `/kit`

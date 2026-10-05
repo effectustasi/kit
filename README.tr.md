@@ -39,6 +39,10 @@ Sonra `/reload-plugins` çalıştır (ya da yeni oturum aç) ve `/kit` yaz.
 - Giriş yapılmış [GitHub CLI](https://cli.github.com/) (`gh`). Yalnızca arama, kurulum, açıklamalar ve güncelleme kontrolü için gerekir.
 - Avatarları indirmek için `curl`. Windows 10+, macOS ve çoğu Linux dağıtımında hazır gelir.
 
+### Bilinen sorunlar
+
+- Claude masaüstü uygulamasının Code sekmesinde `/kit` yazınca turuncu bir **"/kit isn't a command here."** satırı çıkabilir. Zararsızdır: komut yine çalışır ve panel açılır. Masaüstü mesaj kutusu, mod'ların oturum başında eklediği komutları henüz listelemiyor ([anthropics/claude-code#99691](https://github.com/anthropics/claude-code/issues/99691)).
+
 ## Kullanım kılavuzu
 
 ### Panel: `/kit`
