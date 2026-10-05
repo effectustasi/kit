@@ -4,6 +4,14 @@
 
 [English](README.md)
 
+<p align="center">
+  <img src="docs/screenshot.png" alt="Kit paneli: story halkalı kurulu öğeler, context maliyeti ve Top Charts" width="420">
+</p>
+<p align="center">
+  <img src="docs/screenshot-dock.png" alt="Prompt'un üstündeki kit dock'u ve bir hover kartı" width="420">
+</p>
+<p align="center"><sub>Kit paneli ve altında prompt'un üstündeki dock (bir öğenin üzerine gelinmiş hali).</sub></p>
+
 Skill'leri, plugin'leri ve MCP sunucularını tek tek kurarsın. Bir süre sonra neyin yüklü olduğunu, context penceresini neyin doldurduğunu ve neyi hiç kullanmadığını takip edemez olursun. kit, bunların hepsini tek bir panelde toplayan bir Claude Code mod'udur. İçinde küçük bir App Store da var: GitHub'da yeni eklentiler bulursun ve kurulum, hiçbir şey çalışmadan önce tam olarak neler yapacağını gösterir.
 
 ## Neler var

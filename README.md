@@ -4,6 +4,14 @@
 
 [Türkçe](README.tr.md)
 
+<p align="center">
+  <img src="docs/screenshot.png" alt="The Kit pane: installed items with story rings, context cost, and Top Charts" width="420">
+</p>
+<p align="center">
+  <img src="docs/screenshot-dock.png" alt="The kit dock above the prompt with a hover card" width="420">
+</p>
+<p align="center"><sub>Top: the Kit pane. Bottom: the dock above the prompt, hovering an item.</sub></p>
+
 You install skills, plugins and MCP servers one at a time, and before long you lose track of what is loaded, what is eating your context window and what you never use. kit is a Claude Code mod that keeps the whole list in one pane. It also has a small App Store, so you can find new extensions on GitHub and see exactly what an install will run before anything runs.
 
 ## What you get
