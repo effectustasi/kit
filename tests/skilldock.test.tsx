@@ -86,8 +86,8 @@ function world(on: On, calls: string[][] = [], store: Record<string, unknown> = 
   })
 }
 
-const PANE = { plugin: 'kit', component: 'Pane', requestId: 'kit', props: {} as any } as const
-const BAND = { plugin: 'kit', component: 'AbovePrompt', props: { hasSurvey: false, isWorking: false, maxRows: 12, bodyColumns: 100 } as any } as const
+const PANE = { plugin: 'skilldock', component: 'Pane', requestId: 'kit', props: {} as any } as const
+const BAND = { plugin: 'skilldock', component: 'AbovePrompt', props: { hasSurvey: false, isWorking: false, maxRows: 12, bodyColumns: 100 } as any } as const
 
 describe('kit pane', () => {
   for (const surface of SURFACES) {

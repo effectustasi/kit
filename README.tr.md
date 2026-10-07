@@ -1,4 +1,6 @@
-# kit
+# skilldock
+
+`/kit` komutuyla açılır.
 
 **Claude Code araç kutun, tek bakışta.** Kurduğun tüm skill, plugin ve MCP sunucularını gör: bu sohbette hangisi aktif, bağlamda ne kadar yer kaplıyor. Hepsini tek tuşla aç ya da kapat.
 
@@ -8,18 +10,18 @@
   <img src="docs/screenshot.png" alt="Kit paneli: story halkalı kurulu öğeler, context maliyeti ve Top Charts" width="420">
 </p>
 <p align="center">
-  <img src="docs/screenshot-dock.png" alt="Prompt'un üstündeki kit dock'u ve bir hover kartı" width="420">
+  <img src="docs/screenshot-dock.png" alt="Prompt'un üstündeki skilldock tutamacı ve bir hover kartı" width="420">
 </p>
 <p align="center"><sub>Kit paneli ve altında prompt'un üstündeki dock (bir öğenin üzerine gelinmiş hali).</sub></p>
 
-Skill'leri, plugin'leri ve MCP sunucularını tek tek kurarsın. Bir süre sonra neyin yüklü olduğunu, context penceresini neyin doldurduğunu ve neyi hiç kullanmadığını takip edemez olursun. kit, bunların hepsini tek bir panelde toplayan bir Claude Code mod'udur. İçinde küçük bir App Store da var: GitHub'da yeni eklentiler bulursun ve kurulum, hiçbir şey çalışmadan önce tam olarak neler yapacağını gösterir.
+Skill'leri, plugin'leri ve MCP sunucularını tek tek kurarsın. Bir süre sonra neyin yüklü olduğunu, context penceresini neyin doldurduğunu ve neyi hiç kullanmadığını takip edemez olursun. skilldock, bunların hepsini tek bir panelde toplayan bir Claude Code mod'udur. İçinde küçük bir App Store da var: GitHub'da yeni eklentiler bulursun ve kurulum, hiçbir şey çalışmadan önce tam olarak neler yapacağını gösterir.
 
 ## Neler var
 
 - **Kurduğun her şey için tek panel.** Plugin'ler, kişisel skill'ler ve MCP sunucuları, her biri GitHub sahibinin yuvarlak avatarıyla görünür.
 - **Görünür context maliyeti.** Her öğenin bu sohbette kaç token tuttuğu ve toplamın context penceresine oranı.
 - **Tek tuşla aç/kapat.** Bir skill'i, plugin'i ya da MCP sunucusunu kaybetmeden kapat, sonra aynen geri aç.
-- **Kullanım takibi.** kit, Claude'un her öğeyi gerçekte kaç kez kullandığını sayar. Token harcayıp 14+ gündür kullanılmayanları sana gösterir.
+- **Kullanım takibi.** skilldock, Claude'un her öğeyi gerçekte kaç kez kullandığını sayar. Token harcayıp 14+ gündür kullanılmayanları sana gösterir.
 - **Güncellemeler.** Bir plugin'in marketplace'inde yeni sürüm çıktığında rozet çıkar, tek tuşla güncellersin.
 - **GitHub'dan keşfet ve kur.** Top Charts ve arama, küçük bir App Store gibi çalışır. Her kurulum önce planını ve güvenlik uyarılarını gösterir.
 - **Prompt'un üstünde bir dock.** Hiçbir şey açmadan neyin aktif olduğunu bir bakışta gösterir.
@@ -27,15 +29,15 @@ Skill'leri, plugin'leri ve MCP sunucularını tek tek kurarsın. Bir süre sonra
 ## Kurulum
 
 ```sh
-claude plugin marketplace add effectustasi/kit
-claude plugin install kit@kit
+claude plugin marketplace add effectustasi/skilldock
+claude plugin install skilldock@skilldock
 ```
 
 Sonra `/reload-plugins` çalıştır (ya da yeni oturum aç) ve `/kit` yaz.
 
 **Gereksinimler**
 
-- Mod'ları (function-hook plugin'leri) destekleyen bir Claude Code sürümü. kit, 2.1.286'da geliştirildi ve test edildi.
+- Mod'ları (function-hook plugin'leri) destekleyen bir Claude Code sürümü. skilldock, 2.1.286'da geliştirildi ve test edildi.
 - Giriş yapılmış [GitHub CLI](https://cli.github.com/) (`gh`). Yalnızca arama, kurulum, açıklamalar ve güncelleme kontrolü için gerekir.
 - Avatarları indirmek için `curl`. Windows 10+, macOS ve çoğu Linux dağıtımında hazır gelir.
 
@@ -55,9 +57,9 @@ Kurulu her öğenin yuvarlak bir avatarı var. Etrafındaki halka öğenin durum
 | --- | --- |
 | Renkli story halkası | **Aktif**: bu sohbette yüklü, şu an token harcıyor |
 | İnce gri halka | **Açık**: kurulu ve etkin, ama bu sohbette yüklü değil |
-| Halka yok, soluk | **Kapalı**: kit ile kapatılmış |
+| Halka yok, soluk | **Kapalı**: skilldock ile kapatılmış |
 
-Bir avatarın üzerine gelince öğenin ne yaptığını ve ne sıklıkla kullanıldığını görürsün. Yerleşik uygulama sunucularını ve claude.ai connector'larını kit açıp kapatamaz, bu yüzden bunlar ızgaranın altında tek satırda toplanır.
+Bir avatarın üzerine gelince öğenin ne yaptığını ve ne sıklıkla kullanıldığını görürsün. Yerleşik uygulama sunucularını ve claude.ai connector'larını skilldock açıp kapatamaz, bu yüzden bunlar ızgaranın altında tek satırda toplanır.
 
 ### Detay kartı
 
@@ -88,15 +90,15 @@ Izgaranın altındaki arama kutusu iki tür giriş alır:
 
 Arama kutusu boşken **Top Charts** en çok yıldız almış kurulabilir eklentileri listeler. `awesome-*` listelerini atlar, çünkü onlar kurulacak bir şey değil, eklenti listesidir.
 
-**Get**'e basmak tek başına hiçbir şey kurmaz. kit repoyu inceler ve şunları gösteren bir kart açar:
+**Get**'e basmak tek başına hiçbir şey kurmaz. skilldock repoyu inceler ve şunları gösteren bir kart açar:
 
 - eklentinin türü ve ne kuracağı
 - **çalıştıracağı komutların tam listesi**, sırasıyla
 - ikinci kez bakmaya değer uyarılar: repo **arşivlenmiş**, **bir yıldan uzun süredir commit almamış** ya da **lisanssız**
 
-Bu komutları yalnızca **Install** çalıştırır. kit dört tür repoyu tanır:
+Bu komutları yalnızca **Install** çalıştırır. skilldock dört tür repoyu tanır:
 
-| Repoda bu varsa | kit şunu çalıştırır |
+| Repoda bu varsa | skilldock şunu çalıştırır |
 | --- | --- |
 | `.claude-plugin/marketplace.json` | `claude plugin marketplace add` + `claude plugin install` |
 | `SKILL.md` içeren bir klasör | sığ bir `git clone`, sonra her skill klasörünü `~/.claude/skills`'e kopyalar |
@@ -118,7 +120,7 @@ Skills 2/2 on: agent-reach 312, graphify 122
 MCP servers 4/5 on: serena 3.1k, context7, inventor (off) | +6 app/connector servers 2.0k
 ```
 
-## kit verilerini nerede tutar
+## skilldock verilerini nerede tutar
 
 Her şey kendi bilgisayarında kalır:
 
@@ -133,7 +135,7 @@ Her şey kendi bilgisayarında kalır:
 
 ## Gizlilik
 
-kit'in sunucusu yok ve telemetri göndermez. Kullanım sayıları yerelde tutulur. Yaptığı tek ağ çağrıları:
+skilldock'in sunucusu yok ve telemetri göndermez. Kullanım sayıları yerelde tutulur. Yaptığı tek ağ çağrıları:
 
 - kendi `gh` CLI'n üzerinden GitHub: arama, repo bilgisi, açıklamalar ve güncelleme kontrolü
 - GitHub avatarlarını ve repo kapaklarını indirmek için `curl`
@@ -141,7 +143,7 @@ kit'in sunucusu yok ve telemetri göndermez. Kullanım sayıları yerelde tutulu
 
 ## Platform notları
 
-kit Windows'ta geliştiriliyor. Bazı özellikler şu an Windows araçlarına dayanıyor:
+skilldock Windows'ta geliştiriliyor. Bazı özellikler şu an Windows araçlarına dayanıyor:
 
 - **Skill'leri** açıp kapatırken ve kaldırırken klasörler Windows'ta `cmd /c move` ile, diğer sistemlerde `mv` ile taşınır.
 - Skill kurulumu Windows'ta `xcopy` ile, diğer sistemlerde `cp -R` ile kopyalar.
@@ -155,7 +157,7 @@ Issue'lar ve pull request'ler açıktır. Mod'un tamamı tek dosya: [`hooks/regi
 
 ```sh
 claude plugin validate .   # manifest'i ve hook'ları motorun yapacağı gibi kontrol eder
-claude plugin test .       # tests/kit.test.tsx'i masaüstü ve terminal yüzeylerinde çalıştırır
+claude plugin test .       # tests/skilldock.test.tsx'i masaüstü ve terminal yüzeylerinde çalıştırır
 ```
 
 Canlı bir oturumda geliştirmek için kopyanı `claude --plugin-dir <kit-yolu>` ile yükle.

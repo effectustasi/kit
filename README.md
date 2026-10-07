@@ -1,4 +1,6 @@
-# kit
+# skilldock
+
+Open it with `/kit`.
 
 **Your Claude Code toolbox, at a glance.** See every skill, plugin and MCP server you have installed: what is active in this chat, what it costs in context, and turn it on or off with one press.
 
@@ -8,18 +10,18 @@
   <img src="docs/screenshot.png" alt="The Kit pane: installed items with story rings, context cost, and Top Charts" width="420">
 </p>
 <p align="center">
-  <img src="docs/screenshot-dock.png" alt="The kit dock above the prompt with a hover card" width="420">
+  <img src="docs/screenshot-dock.png" alt="The skilldock handle above the prompt with a hover card" width="420">
 </p>
 <p align="center"><sub>Top: the Kit pane. Bottom: the dock above the prompt, hovering an item.</sub></p>
 
-You install skills, plugins and MCP servers one at a time, and before long you lose track of what is loaded, what is eating your context window and what you never use. kit is a Claude Code mod that keeps the whole list in one pane. It also has a small App Store, so you can find new extensions on GitHub and see exactly what an install will run before anything runs.
+You install skills, plugins and MCP servers one at a time, and before long you lose track of what is loaded, what is eating your context window and what you never use. skilldock is a Claude Code mod that keeps the whole list in one pane. It also has a small App Store, so you can find new extensions on GitHub and see exactly what an install will run before anything runs.
 
 ## What you get
 
 - **One pane for everything you installed.** Plugins, personal skills and MCP servers, each shown as a round avatar of its GitHub owner.
 - **Context cost you can see.** The tokens each item takes up in this chat, and the total as a share of your context window.
 - **One-press on/off.** Turn a skill, plugin or MCP server off without losing it, and turn it back on later exactly as it was.
-- **Usage tracking.** kit counts how often Claude really uses each item, and points out the ones that cost tokens but have sat idle for 14+ days.
+- **Usage tracking.** skilldock counts how often Claude really uses each item, and points out the ones that cost tokens but have sat idle for 14+ days.
 - **Updates.** A badge shows when a plugin's marketplace has a newer version, and you can update with one press.
 - **Discover and install from GitHub.** Top Charts and search work like a small App Store. Each install shows its plan and safety warnings first.
 - **A dock above the prompt.** It shows what is active at a glance without opening anything.
@@ -27,15 +29,15 @@ You install skills, plugins and MCP servers one at a time, and before long you l
 ## Install
 
 ```sh
-claude plugin marketplace add effectustasi/kit
-claude plugin install kit@kit
+claude plugin marketplace add effectustasi/skilldock
+claude plugin install skilldock@skilldock
 ```
 
 Then run `/reload-plugins` (or start a new session) and type `/kit`.
 
 **Requirements**
 
-- A Claude Code build that supports mods (function-hook plugins). kit was built and tested on 2.1.286.
+- A Claude Code build that supports mods (function-hook plugins). skilldock was built and tested on 2.1.286.
 - The [GitHub CLI](https://cli.github.com/) (`gh`), signed in. It is only needed for search, install, descriptions and update checks.
 - `curl`, used to fetch owner avatars. It ships with Windows 10+, macOS and most Linux distributions.
 
@@ -55,9 +57,9 @@ Each installed item gets a round avatar, and the ring around it tells you its st
 | --- | --- |
 | Colorful story ring | **Active**: loaded in this chat and costing tokens right now |
 | Thin gray ring | **On**: installed and enabled, but not loaded in this chat |
-| No ring, faded | **Off**: switched off by kit |
+| No ring, faded | **Off**: switched off by skilldock |
 
-Hover an avatar to see what the item does and how often it has been used. Built-in app servers and claude.ai connectors can't be switched by kit, so they are folded into one line under the grid.
+Hover an avatar to see what the item does and how often it has been used. Built-in app servers and claude.ai connectors can't be switched by skilldock, so they are folded into one line under the grid.
 
 ### The detail card
 
@@ -88,15 +90,15 @@ The search box under the grid takes two kinds of input:
 
 With the search box empty, **Top Charts** lists the most-starred installable extensions. It skips `awesome-*` lists, which are lists of extensions, not something you can install.
 
-Pressing **Get** never installs anything by itself. kit inspects the repo and shows a card with:
+Pressing **Get** never installs anything by itself. skilldock inspects the repo and shows a card with:
 
 - what kind of extension it is and what it will install
 - **the exact commands it will run**, in order
 - warnings worth a second look: the repo is **archived**, has **no commits for over a year**, or has **no license**
 
-Only **Install** runs those commands. kit recognizes four kinds of repo:
+Only **Install** runs those commands. skilldock recognizes four kinds of repo:
 
-| The repo has | kit runs |
+| The repo has | skilldock runs |
 | --- | --- |
 | `.claude-plugin/marketplace.json` | `claude plugin marketplace add` + `claude plugin install` |
 | A folder with a `SKILL.md` | a shallow `git clone`, then copies each skill folder into `~/.claude/skills` |
@@ -118,7 +120,7 @@ Skills 2/2 on: agent-reach 312, graphify 122
 MCP servers 4/5 on: serena 3.1k, context7, inventor (off) | +6 app/connector servers 2.0k
 ```
 
-## Where kit keeps its data
+## Where skilldock keeps its data
 
 Everything stays on your machine:
 
@@ -133,7 +135,7 @@ Everything stays on your machine:
 
 ## Privacy
 
-kit has no server and sends no telemetry. Usage counts are stored locally. The only network calls it makes:
+skilldock has no server and sends no telemetry. Usage counts are stored locally. The only network calls it makes:
 
 - GitHub through your own `gh` CLI, for search, repo details, descriptions and update checks
 - `curl`, to fetch GitHub avatars and repo covers
@@ -141,7 +143,7 @@ kit has no server and sends no telemetry. Usage counts are stored locally. The o
 
 ## Platform notes
 
-kit is developed on Windows. Some features currently rely on Windows tools:
+skilldock is developed on Windows. Some features currently rely on Windows tools:
 
 - Turn on/off and Remove for **skills** move folders with `cmd /c move` on Windows and `mv` elsewhere.
 - Skill installs copy with `xcopy` on Windows and `cp -R` elsewhere.
@@ -155,10 +157,10 @@ Issues and pull requests are welcome. The whole mod is one file, [`hooks/registe
 
 ```sh
 claude plugin validate .   # checks the manifest and the hooks the way the engine will
-claude plugin test .       # runs tests/kit.test.tsx on desktop and terminal surfaces
+claude plugin test .       # runs tests/skilldock.test.tsx on desktop and terminal surfaces
 ```
 
-To develop against a live session, load your checkout with `claude --plugin-dir <path-to-kit>`.
+To develop against a live session, load your checkout with `claude --plugin-dir <path-to-skilldock>`.
 
 ## License
 

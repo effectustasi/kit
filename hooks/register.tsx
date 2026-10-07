@@ -5,16 +5,16 @@ import type { Hit, Inventory, Kind, Plan, Row, Usage } from '../types'
 
 const PANE = 'kit'
 const empty: Inventory = { rows: [], tokens: 0, window: 0 }
-const inventory = atom({ plugin: 'kit', key: 'inventory' } as const, empty)
-const busy = atom({ plugin: 'kit', key: 'busy' } as const, '')
-const changed = atom({ plugin: 'kit', key: 'changed' } as const, false)
-const plan = atom({ plugin: 'kit', key: 'plan' } as const, null as Plan | null)
-const selected = atom({ plugin: 'kit', key: 'selected' } as const, '')
-const hits = atom({ plugin: 'kit', key: 'hits' } as const, null as Hit[] | null)
-const query = atom({ plugin: 'kit', key: 'query' } as const, '')
-const top = atom({ plugin: 'kit', key: 'top' } as const, null as Hit[] | null)
-const removing = atom({ plugin: 'kit', key: 'removing' } as const, '')
-const usageSince = atom({ plugin: 'kit', key: 'usageSince' } as const, 0)
+const inventory = atom({ plugin: 'skilldock', key: 'inventory' } as const, empty)
+const busy = atom({ plugin: 'skilldock', key: 'busy' } as const, '')
+const changed = atom({ plugin: 'skilldock', key: 'changed' } as const, false)
+const plan = atom({ plugin: 'skilldock', key: 'plan' } as const, null as Plan | null)
+const selected = atom({ plugin: 'skilldock', key: 'selected' } as const, '')
+const hits = atom({ plugin: 'skilldock', key: 'hits' } as const, null as Hit[] | null)
+const query = atom({ plugin: 'skilldock', key: 'query' } as const, '')
+const top = atom({ plugin: 'skilldock', key: 'top' } as const, null as Hit[] | null)
+const removing = atom({ plugin: 'skilldock', key: 'removing' } as const, '')
+const usageSince = atom({ plugin: 'skilldock', key: 'usageSince' } as const, 0)
 
 // ---------- Usage: count what Claude actually uses, across sessions ----------
 

@@ -1,13 +1,15 @@
 {
-  "name": "kit",
-  "owner": { "name": "effectustasi" },
-  "description": "kit: see, switch and discover your Claude Code skills, plugins and MCP servers.",
+  "name": "skilldock",
+  "owner": {
+    "name": "effectustasi"
+  },
+  "description": "skilldock: see, switch and discover your Claude Code skills, plugins and MCP servers.",
   "plugins": [
     {
-      "name": "kit",
+      "name": "skilldock",
       "source": "./",
       "description": "A minimal panel for your skills, plugins and MCP servers: what is active in this chat, what it costs in context, and one-press on/off.",
-      "version": "0.1.0"
+      "version": "0.2.0"
     }
   ]
 }

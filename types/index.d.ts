@@ -66,6 +66,6 @@ export type Hit = {
 
 declare module 'claude-code' {
   interface PluginState {
-    kit: { inventory: Inventory; busy: string; changed: boolean; plan: Plan | null; selected: string; hits: Hit[] | null; query: string; top: Hit[] | null; removing: string; usageSince: number }
+    skilldock: { inventory: Inventory; busy: string; changed: boolean; plan: Plan | null; selected: string; hits: Hit[] | null; query: string; top: Hit[] | null; removing: string; usageSince: number }
   }
 }
